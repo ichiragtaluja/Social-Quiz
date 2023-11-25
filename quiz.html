@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/quiz.css" />
   </head>
   <body>
     <header>
@@ -19,26 +20,53 @@
       </nav>
     </header>
     <main>
-      <section id="level">
-        <div id="">LEVEL:BEGINNER</div>
-        <div id="score">Score:10/20</div>
+      <section>
+        <p id="level"></p>
+        <p id="score"></p>
       </section>
       <section>
         <ul id="questions"></ul>
       </section>
 
-      <section>
-        <h2>Congratulations</h2>
+      <section id="greet">
+        <h2 id="greet-heading">Congratulations!</h2>
 
-        <p>
-          You've successfully completed the Beginner Level.Would you like to
-          proceed to the next level?
+        <p id="greet-text">
+          You've successfully completed the this.Would you like to proceed to
+          the next level?
         </p>
         <div>
-          <a>Yes</a>
+          <a href="quiz.html" id="next-level">Yes</a>
           <a href="home.html">No</a>
         </div>
       </section>
+
+      <section id="try-again">
+        <h2 id="try-again-heading">Try again!</h2>
+
+        <p id="try-again-text">
+          Hey there! Don't worry, you're getting there! 😊 Give it another shot,
+          you're so close!
+        </p>
+        <div>
+          <a href="quiz.html">Yes</a>
+          <a href="home.html">No</a>
+        </div>
+      </section>
+
+      <section id="winner">
+        <h2 id="winner-heading">You won!</h2>
+
+        <p id="winner-text">
+          "Congratulations! You're the winner of the quiz! 🏆 Great job!" Play
+          Again?
+        </p>
+        <div>
+          <a id="play-again" href="quiz.html">Yes</a>
+          <a href="home.html">No</a>
+        </div>
+      </section>
+
       <a href="home.html">Home</a>
     </main>
     <footer></footer>

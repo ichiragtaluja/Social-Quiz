@@ -27,19 +27,6 @@ function displayLevels(data) {
   console.log(levelUl);
 }
 
-{
-  /* <li>
-            <section>
-              <h4>Beginner Level</h4>
-              <p>
-                Start your social studies journey with 30 basic quesions in
-                geography, history, economic and civics.
-              </p>
-              <a id="start" href="quiz.html">Start</a>
-            </section>
-          </li> */
-}
-
 window.onload = function () {
   let xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
@@ -50,6 +37,7 @@ window.onload = function () {
       }
     }
   };
+
   xhr.open("GET", "php/get-levels.php", true);
   xhr.send();
 };
