@@ -1,11 +1,14 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=social-quiz;charset=utf8mb4";
+// $dsn = "mysql:host=localhost;dbname=social-quiz;charset=utf8mb4";
+
+
+// $dbusername = "root";
+// $dbpassword = "";
+// $pdo = new PDO($dsn, $dbusername, $dbpassword);
+include("./partials/dbconnect.php");
 
 $level = $_GET["level"];
-$dbusername = "root";
-$dbpassword = "";
-$pdo = new PDO($dsn, $dbusername, $dbpassword);
 
 $stmt = $pdo->prepare("SELECT * FROM `questions` INNER JOIN `levels` ON `questions`.`level` = `levels`.`level-id` WHERE `levels`.`level`= '$level';");
 
