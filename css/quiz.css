@@ -1,3 +1,16 @@
+*root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --primary-color: rgb(255, 166, 0);
+}
+
+body {
+  font-size: 18px;
+  font-family: "roboto", "sans-serif";
+  line-height: 1.5em;
+}
+
 #greet {
   display: none;
 }
@@ -8,4 +21,239 @@
 
 #winner {
   display: none;
+}
+header {
+  position: sticky;
+  top: 0px;
+  border: 1px solid black;
+  z-index: 1;
+}
+main {
+  border: 1px solid black;
+  min-height: 100vh;
+}
+footer {
+  bottom: 0px;
+  position: sticky;
+  border: 1px solid black;
+  background-color: black;
+  color: rgb(177, 177, 177);
+  text-align: center;
+  font-size: smaller;
+}
+
+/* nav */
+nav {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  background-color: black;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+nav ul li {
+  padding: 0.5em;
+  border: 1px solid black;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(178, 178, 178);
+}
+
+nav ul li a:hover {
+  color: white;
+}
+nav ul li > * {
+  padding: 0.5em;
+}
+
+/* hero */
+#hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("https://media.giphy.com/media/bcpDS8s7Cj1Nla3fwa/giphy.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+#hero h1 {
+  font-size: 3em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  text-align: center;
+  position: relative;
+  top: -2em;
+}
+
+#hero a {
+  position: relative;
+  top: -2em;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 2em;
+  margin-right: 1em;
+  text-decoration: none;
+}
+
+#hero div a:first-child {
+  background-color: rgb(255, 166, 0);
+  border: 1px solid white;
+}
+#hero div a:first-child:hover {
+  background-color: rgb(255, 179, 39);
+}
+#hero div a:last-child {
+  color: rgb(216, 216, 216);
+  border: 1px solid rgb(197, 197, 197);
+}
+#hero div a:last-child:hover {
+  color: white;
+  border: 1px solid white;
+}
+
+/* level section */
+#level-section {
+  border: 1px solid red;
+  padding: 1em;
+  background-color: rgb(245, 245, 245);
+}
+#level-section h2 {
+  text-align: center;
+  font-size: 1.8em;
+  padding: 1em;
+  margin: 0;
+}
+
+#level-section ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-inline-start: 0;
+  align-items: stretch;
+}
+#level-section section {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#level-section ul li {
+  box-shadow: 8px 0px 53px 14px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 0.7em;
+  border-radius: 1em;
+  background-color: rgb(246, 246, 246);
+}
+#level-section ul li:hover {
+  background-color: white;
+}
+#level-section ul li h4 {
+  font-size: larger;
+  margin: 0;
+}
+#level-section ul li p {
+  color: rgb(153, 153, 153);
+}
+
+#level-section ul li a {
+  color: white;
+  padding: 0.7em 1.8em;
+  border-radius: 2em;
+  text-decoration: none;
+
+  align-self: start;
+  background-color: rgb(252, 164, 0);
+  margin-top: 1em;
+}
+#level-section ul li a:hover {
+  background-color: rgb(255, 185, 55);
+}
+
+/* questions */
+
+#questions-section {
+  border: 1px solid black;
+  background-color: rgb(244, 244, 244);
+}
+
+#questions-section > ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+#questions-section > ul > li {
+  border-radius: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  margin: 1rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 8px 0px 53px 14px rgba(0, 0, 0, 0.1);
+}
+
+#questions-section > ul > li ul {
+  border: 1px solid black;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
+}
+
+#questions-section > ul > li ul > li {
+  cursor: pointer;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 2em;
+  text-align: left;
+  align-self: flex-start;
+  background-color: rgb(252, 164, 0);
+  margin: 0.5em;
+  min-width: 30%;
+}
+#questions-section > ul > li ul > li:hover {
+  background-color: rgb(255, 185, 55);
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+
+  nav ul li {
+    padding: 1em;
+    font-size: larger;
+  }
+  #hero h1 {
+    font-size: 4em;
+    text-align: center;
+    max-width: 70vh;
+  }
+
+  #level-section ul {
+    flex-direction: row;
+  }
+
+  #level-section ul li p {
+    flex-grow: 1;
+    margin-block-end: 0;
+  }
+  #level-section ul li a {
+    align-self: flex-start;
+    justify-self: flex-start;
+    margin-bottom: 1em;
+  }
+
+  #questions-section > ul > li ul > li {
+    min-width: 25%;
+  }
 }

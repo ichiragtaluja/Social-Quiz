@@ -5,18 +5,19 @@ let score = 0;
 let serial = 0;
 
 function handleClick(e, item) {
+  console.log(e.target);
   if (item.answered) {
   } else {
     item.answered = true;
     if (e.target.textContent == item.answer) {
-      e.target.style.color = "green";
+      e.target.style.backgroundColor = "green";
 
       score++;
       serial++;
       document.querySelector("#score").textContent = `Score: ${score}/10`;
     } else {
       serial++;
-      e.target.style.color = "red";
+      e.target.style.backgroundColor = "yellow";
     }
   }
 
@@ -58,7 +59,10 @@ function displayQuestions(data) {
       let option = document.createElement("li");
       option.textContent = item[`option${i + 1}`];
 
-      option.addEventListener("click", (e) => handleClick(e, item));
+      option.addEventListener("click", (e) => {
+        console.log(e.target);
+        handleClick(e, item);
+      });
       ul.appendChild(option);
     }
 
@@ -69,7 +73,6 @@ function displayQuestions(data) {
     div.appendChild(h2);
     div.appendChild(ul);
   });
-  console.log(levelUl);
 }
 
 window.onload = function () {
