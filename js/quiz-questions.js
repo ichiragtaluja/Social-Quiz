@@ -10,26 +10,26 @@ function handleClick(e, item) {
   } else {
     item.answered = true;
     if (e.target.textContent == item.answer) {
-      e.target.style.backgroundColor = "green";
+      e.target.style.backgroundColor = "#a6d608";
 
       score++;
       serial++;
       document.querySelector("#score").textContent = `Score: ${score}/10`;
     } else {
       serial++;
-      e.target.style.backgroundColor = "yellow";
+      e.target.style.backgroundColor = "#ff6347";
     }
   }
 
-  if (serial === 2) {
+  if (serial === 10) {
     if (level !== "Advanced") {
-      if (score > 1) {
+      if (score > 5) {
         document.querySelector("#greet").style.display = "block";
       } else {
         document.querySelector("#try-again").style.display = "block";
       }
     } else {
-      if (score > 1) {
+      if (score > 5) {
         document.querySelector("#winner").style.display = "block";
       } else {
         document.querySelector("#try-again").style.display = "block";

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Social Quiz</title>
     <link rel="stylesheet" href="./css/quiz.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,11 +11,29 @@
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&family=Happy+Monkey&family=Inter:wght@400;500;700&family=Jost&family=Karla:wght@400;500;700&family=Lato:wght@400;900&family=Montserrat:wght@400;700&family=Open+Sans&family=Orbitron:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@100;400;900&family=Sofia+Sans+Condensed:ital,wght@1,100&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
   </head>
   <body>
     <header>
       <nav>
-        <div><a href="index.html">Logo</a></div>
+        <div id="logo"><a href="index.html">Social Quiz</a></div>
         <div>
           <ul>
             <li><a href="how-it-works.html">How it works?</a></li>
@@ -26,7 +44,7 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section id="board">
         <p id="level"></p>
         <p id="score"></p>
       </section>
@@ -34,46 +52,50 @@
         <ul id="questions"></ul>
       </section>
 
-      <section id="greet">
-        <h2 id="greet-heading">Congratulations!</h2>
-
-        <p id="greet-text">
-          You've successfully completed the this.Would you like to proceed to
-          the next level?
-        </p>
+      <section class="pop-up" id="greet">
         <div>
-          <a href="quiz.html" id="next-level">Yes</a>
-          <a href="index.html">No</a>
+          <h2 id="greet-heading">Congratulations!</h2>
+
+          <p id="greet-text">
+            You've successfully completed the this.Would you like to proceed to
+            the next level?
+          </p>
+          <div>
+            <a href="quiz.html" id="next-level">Yes</a>
+            <a href="index.html">No</a>
+          </div>
         </div>
       </section>
 
-      <section id="try-again">
-        <h2 id="try-again-heading">Try again!</h2>
-
-        <p id="try-again-text">
-          Hey there! Don't worry, you're getting there! 😊 Give it another shot,
-          you're so close!
-        </p>
+      <section class="pop-up" id="try-again">
         <div>
-          <a href="quiz.html">Yes</a>
-          <a href="index.html">No</a>
+          <h2 id="try-again-heading">Try again!</h2>
+
+          <p id="try-again-text">
+            Hey there! Don't worry, you're getting there! 😊 Give it another
+            shot, you're so close!
+          </p>
+          <div>
+            <a href="quiz.html">Yes</a>
+            <a href="index.html">No</a>
+          </div>
         </div>
       </section>
 
-      <section id="winner">
-        <h2 id="winner-heading">You won!</h2>
-
-        <p id="winner-text">
-          "Congratulations! You're the winner of the quiz! 🏆 Great job!" Play
-          Again?
-        </p>
+      <section class="pop-up" id="winner">
         <div>
-          <a id="play-again" href="quiz.html">Yes</a>
-          <a href="index.html">No</a>
+          <h2 id="winner-heading">You won!</h2>
+
+          <p id="winner-text">
+            "Congratulations! You're the winner of the quiz! 🏆 Great job!" Play
+            Again?
+          </p>
+          <div>
+            <a id="play-again" href="quiz.html">Yes</a>
+            <a href="index.html">No</a>
+          </div>
         </div>
       </section>
-
-      <a href="index.html">Home</a>
     </main>
     <footer><p>&copy Sai Kumar</p></footer>
     <script src="./js/quiz-questions.js"></script>
